@@ -1,0 +1,514 @@
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Estilos específicos para la primera sección */
+        .section:nth-child(1) {
+            margin: 0;
+            padding: 0;
+            background-image:url("../objetos/svg/fondo1.svg");
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content:center ;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .section:nth-child(2) {
+            margin: 0;
+            padding: 0;
+            background:  #ff00ff;
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content:center ;
+            align-items: center;
+            height: 10vh;
+        }
+
+        .section:nth-child(3) {
+            margin: 0;
+            padding: 0;
+            background-image: url("../objetos/svg/fondo5.svg");
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content:center ;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #dark-mode-toggle-label {
+            display: block;
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(1px, 1px, 1px, 1px);
+        }
+        td:nth-child(1) {
+            color: #66CCFF;
+            font-family: "Montserrat", sans-serif; /* Aplica la fuente Montserrat a todas las celdas */
+            font-size: 72px; /* Tamaño de fuente para las letras B, N y G */
+            font-weight: bold;   /* Azul claro */
+        }
+        td:nth-child(2) {
+            color: #FF99FF;
+            font-family: "Montserrat", sans-serif; /* Aplica la fuente Montserrat a todas las celdas */
+            font-size: 72px; /* Tamaño de fuente para las letras B, N y G */
+            font-weight: bold;   /* Rosa */
+        }
+        td:nth-child(3) {
+            color: #089CA3;
+            font-family: "Montserrat", sans-serif; /* Aplica la fuente Montserrat a todas las celdas */
+            font-size: 72px; /* Tamaño de fuente para las letras B, N y G */
+            font-weight: bold;
+        }   
+        body.dark-mode td:nth-child(1) {
+            color: #0000ff;
+            font-family: "Montserrat", sans-serif; /* Aplica la fuente Montserrat a todas las celdas */
+            font-size: 72px; /* Tamaño de fuente para las letras B, N y G */
+            font-weight: bold; 
+        }
+        body.dark-mode td:nth-child(2) {
+            color: #ff00ff;
+            font-family: "Montserrat", sans-serif; /* Aplica la fuente Montserrat a todas las celdas */
+            font-size: 72px; /* Tamaño de fuente para las letras B, N y G */
+            font-weight: bold;
+        }
+        body.dark-mode td:nth-child(3) {
+        color: #00ff00; 
+        font-family: "Montserrat", sans-serif; /* Aplica la fuente Montserrat a todas las celdas */
+        font-size: 72px; /* Tamaño de fuente para las letras B, N y G */
+        font-weight: bold;
+        }
+        .switch {
+        position: relative;
+        display: inline-block;
+        width: 40px; /* Reduce el ancho del switch */
+        height: 20px; /* Reduce la altura del switch */
+         }
+        .switch input {
+            display: none;
+        }
+        .slider {
+            position:fixed ;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 20px; /* Ajusta el radio del borde */
+            width: 50px; /* Aumenta el ancho del botón del modo oscuro */
+            height: 25px; /* Aumenta la altura del botón del modo oscuro */
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px; /* Ajusta la altura del botón */
+            width: 18px; /* Ajusta el ancho del botón */
+            left: 3px; /* Ajusta la posición izquierda del botón */
+            bottom: 3px; /* Ajusta la posición inferior del botón */
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #3A0CA3;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          max-width: 600px;
+          margin: 0 auto;
+          font-family: Arial, sans-serif;
+          table-layout: fixed;
+        }
+        td {
+          width: 70px;
+          height: 70px;
+          padding: 0;
+          text-align: center;
+        }
+        .boton {
+        width: 70px;
+        height: 70%;
+        font-size: 25px;
+        background-color: #ffffff;
+        border: none;
+        border-radius: 10%;
+        transition: all 0.2s ease-in-out;
+        }
+        .boton.seleccionado {
+          background-color:#5A189A;
+          font-size: 30px;
+          transform: scale(1.1);
+          color: #ffffff;
+        }
+        .boton.delaforma {
+          background-color: #FF6D00;
+          color:#000000 ;
+        }
+        .boton.nodelaforma {
+          background-color:#FBD1A2;
+          color:#d3c9be;
+          opacity: 0.5; /* Reduce la opacidad para indicar que está desactivado */
+          cursor: not-allowed;
+        }
+        #restaurar { 
+          border: none;
+          border-radius: 10px;
+          padding: 8px 15px;
+          font-size: 12px;
+          background-color: #FF6D00;
+          color: #000000;
+          cursor: pointer;
+        }
+        .contenedor_restaurar {
+         text-align:center;
+        }
+        h1, img {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #btn-mas {
+            display: none;
+        }
+        .container {
+            position:fixed; 
+            bottom: 20px;
+            left: 20px;
+            display: flex; /* Agregado */
+            align-items: center; /* Agregado */
+            flex-direction: row-reverse; /* Cambiado */
+        }
+        .redes {
+            display: flex; /* Cambiado a flex */
+            gap: 10px;
+            transition: all 500ms ease;
+        }
+        .redes a, .btn-mas label {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            width: 55px;
+            height: 55px;
+            line-height: 55px;
+            text-align: center;
+            border-radius: 50%;
+            box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+            transition: all 500ms ease;
+        }
+        .redes a.fa-facebook {
+            background: rgb(12, 114, 216);
+        }
+        .redes a.fa-phone {
+            background: rgb(23, 197, 23);
+        }
+        .redes a.fa-whatsapp {
+            background: rgb(23, 197, 23);
+        }
+        .redes a:hover {
+            background: #fff;
+            color: red;
+        }
+        .redes a {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 500ms ease;
+        }
+        #btn-mas:checked ~ .redes a {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(150%);
+            transition: all 500ms ease;
+        }
+        .btn-mas {
+            cursor: pointer;
+            background: #FF6D00;
+            font-size: 23px;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            line-height: 55px;
+            text-align: center;
+            box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+            transition: all 500ms ease;
+        }
+        #btn-mas:checked ~ .btn-mas {
+            transform: rotate(135deg);
+            font-size: 25px;
+        }
+        #centrarselect {
+        text-align: center;
+        }
+        #forma {
+            padding: 5px;
+            font-size: 18px;
+            background-color: #FF6D00;
+            color: #000000;
+            border: none;
+            border-radius: 8px;
+            text-align: center;  
+        }
+        #forma option {
+            font-size: 16px;
+        }
+        body.dark-mode .boton.seleccionado {
+            background-color:#F72585 ; /* Cambia el color de fondo de .boton.seleccionado en modo oscuro */
+            color: rgb(0, 0, 0); /* Cambia el color de texto de .boton.seleccionado en modo oscuro */
+        }
+        body.dark-mode .boton.boton.delaforma {
+            background-color: #3A0CA3; /* Cambia el color de fondo de .boton.seleccionado en modo oscuro */
+            color: white; /* Cambia el color de texto de .boton.seleccionado en modo oscuro */
+        }
+        body.dark-mode .boton.boton.nodelaforma {
+            background-color: #4CC9F0; /* Cambia el color de fondo de .boton.seleccionado en modo oscuro */
+            color: #4895EF; /* Cambia el color de texto de .boton.seleccionado en modo oscuro */
+            opacity: 0.5; /* Reduce la opacidad para indicar que está desactivado */
+            cursor: not-allowed;
+        }
+        body.dark-mode .btn-mas{
+            background-color: #3A0CA3; /* Cambia el color de fondo de .boton.seleccionado en modo oscuro */
+            color: white; /* Cambia el color de texto de .boton.seleccionado en modo oscuro */
+        }
+        body.dark-mode #restaurar{
+            background-color: #3A0CA3; /* Cambia el color de fondo de .boton.seleccionado en modo oscuro */
+            color: white; /* Cambia el color de texto de .boton.seleccionado en modo oscuro */
+        }
+        body.dark-mode #forma{
+            background-color: #3A0CA3; /* Cambia el color de fondo de .boton.seleccionado en modo oscuro */
+            color: white; /* Cambia el color de texto de .boton.seleccionado en modo oscuro */
+        }
+        #contenedor-botones {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;   
+        }
+        #bingo-title {
+            font-family: "Poppins", sans-serif;
+            font-size: 36px;
+            color: #C4BD97;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        body.dark-mode #bingo-title {
+            font-family: "Poppins", sans-serif;
+            font-size: 36px;
+            color: #3B3B3B;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section h1 {
+            font-family: "Poppins", sans-serif;
+            font-size: 42px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #titulo_tercera_seccion {
+            margin: 0%;
+            padding-top: 0%;
+            font-family: "Poppins", sans-serif;
+            font-size: 36px;
+            color: #ffffff;
+            margin-bottom: 10px;
+            text-align: center;
+            position: absolute; /* Establecer la posición absoluta para el h2 */
+            top: 70%; /* Alinear en la parte superior de la sección */
+        }
+
+
+
+        /*Botones desplazamiento hacia arriba y hacia abajo*/
+
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        button {
+            border: none;
+        }
+
+        .section {
+            display: grid;
+            height: 100vh;
+            place-items: center;
+            width: 100%;
+            position: relative; /* Establecer la posición relativa en la sección */
+    }
+    
+        .button_up {
+            color:#ffffff;
+            background:#3A0CA3;
+            border-radius: 50%;
+            box-shadow: 0px 10px 20px rgba(50, 50, 50, 1);
+            cursor: pointer;
+            display: grid;
+            height: 50px;
+            opacity: 0;
+            place-items: center;
+            position: fixed;
+            right: 30px;
+            top: 30px;
+            transition: 0.5s ease-in-out;
+            visibility: hidden;
+            width: 50px;
+            animation: animateToTop 0.3s ease-in-out infinite alternate;
+        }
+
+        .button_up:hover {
+            animation: animateToTop 0.3s ease-in-out infinite alternate;
+            background: #3A0CA3;
+        }
+
+        .button_down {
+            color:#ffffff;
+            background: #3A0CA3;
+            border-radius: 50%;
+            box-shadow: 0px 10px 20px rgba(50, 50, 50, 1);
+            cursor: pointer;
+            display: grid;
+            height: 50px;
+            opacity: 0;
+            place-items: center;
+            position: fixed;
+            left: 30px;
+            top: 30px;
+            transition: 0.5s ease-in-out;
+            visibility:visible;
+            width: 50px;
+            
+        }
+
+        .button_down:hover {
+            
+            background: #3A0CA3;
+        }
+
+        @keyframes animateToTop {
+            100% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .show_button_up {
+            opacity: 1;
+            top: calc(100% - 80px);
+            visibility: visible;
+        }
+
+        .button_up span {
+            color:  #fff;
+            font-size: 2rem;
+        }
+
+        .button_up:hover span {
+            color: #fff;
+        }
+
+        .button_up:before {
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            bottom: -10px;
+            content: '';
+            left: -10px;
+            opacity: 1;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            transform: scale(0.2);
+            transition: 0.3s ease-in-out;
+            transition-delay: 0.3s;
+            visibility: visible;
+            animation: pulse 2s infinite;
+        }
+
+        .show_button_up {
+            opacity: 1;
+            top: calc(100% - 80px);
+            visibility: visible;
+        }
+
+        .button_up span {
+                color:  #fff;
+                font-size: 2rem;
+        }
+
+        .button_up:hover span {
+                color: #fff;
+        }
+
+        .show_button_down {
+            opacity: 1;
+            top: calc(100% - 80px);
+            visibility: visible;
+        }
+
+        .button_down span {
+                color:  #fff;
+                font-size: 2rem;
+        }
+
+        .button_down:hover span {
+                color: #fff;
+        }
+
+        .button_down:before {
+            border: 2px solid rgba(255, 255, 255, 0);
+            border-radius: 50%;
+            bottom: -10px;
+            content: '';
+            left: -10px;
+            opacity: 1;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            transform: scale(1);
+            transition: 0.3s ease-in-out;
+            transition-delay: 0.3s;
+            visibility: visible;
+            animation: pulse 2s infinite;
+            display: block
+        }
+
+            @keyframes pulse {
+                0%, 100% {
+                    transform: scale(1);
+                    border-width: 1px;
+                    border-color: rgb(255, 255, 255);
+                }
+                50% {
+                    transform: scale(1);
+                    border-width: 10px;
+                    border-color: rgba(255, 255, 255, 0.115);
+                }
+        }
+
+
+    @media (max-width: 767px) {
+        html {
+            font-size: 12px;
+        }
+    }

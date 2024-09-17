@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="../css/styles.css" rel="stylesheet" type="text/css" />
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bingo Club Eventos</title>
+</head>
+<script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+<body>
+<main>
+<section class="section"
+id="seccion1"
+data-bg1="../../objetos/svg/fondo1.svg"
+data-bg2="../../objetos/svg/fondo2.svg"
+data-bg3="../../objetos/svg/fondo3.svg"
+data-bg4="../../objetos/svg/fondo4.svg">
+<div id="contenedor-botones">
+<h1 id="bingo-title">BINGO CLUB</h1>
+<select id="forma" name="forma" onchange="cambiarForma()" >
+<option value="" selected disabled>Forma de Juego</option>
+<option value="pleno">Pleno</option>
+<option value="formadeo">Forma de "O"</option>
+<option value="formadeh">Forms de "H"</option>
+<option value="formadeu">Forma de "U"</option>
+<option value="formadec">Forma de "C"</option>
+<option value="formaden">Forma de "n"</option>
+<option value="formadet">Forma de "T"</option>
+<option value="formadex">Forma de "X"</option>
+<option value="formade+">Forma de "+"</option>
+<option value="formadel">Forma de "L"</option>
+</select>
+<table>
+<tr>
+<td>B</td>
+<td>N</td>
+<td>G</td>
+</tr>
+
+<td><button class="boton" onclick="cambiar(this)" id="b1" name="b1"></button></td>
+<td><button class="boton" onclick="cambiar(this)" id="n1" name="n1"></button></td>
+<td><button class="boton" onclick="cambiar(this)" id="g1" name="g1"></button></td>
+</tr>
+<tr>
+<td><button class="boton" onclick="cambiar(this)" id="b2" name="b2"></button></td>
+<td><button class="boton" onclick="cambiar(this)" id="n2" name="n2"></button></td>
+<td><button class="boton" onclick="cambiar(this)" id="g2" name="g2"></button></td>
+</tr>
+<tr>
+<td><button class="boton" onclick="cambiar(this)" id="b3" name="b3"></button></td>
+<td><button class="boton" onclick="cambiar(this)" id="n3" name="n3"></button></td>
+<td><button class="boton" onclick="cambiar(this)" id="g3" name="g3"></button></td>
+
+ </tr>
+  <tr>
+  <td>
+  </td>
+  <td></td>
+  <td>
+  <div class="contenedor_restaurar">
+  <button id="restaurar" onclick="restaurar()">Restaurar</button>
+  </div>
+  </td>
+  </tr>
+  </table>
+  </div>
+  </section>
+  <section class="section">
+  </section>
+  <section class="section">
+  <h2 id="titulo_tercera_seccion">ESTE ESPACIO ESTA RESERVADO PARA TI</h2>
+  </section>
+  <button id="button_up" class="button_up">
+    <i class="material-icons">arrow_upward</i>
+  </button>
+  <button id="button_down" class="button_down">
+    <i class="material-icons">arrow_downward</i>
+  </button>
+  </main>
+  <script src="../javascripts/main.js"></script>
+  </body>
+  </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
